@@ -1,114 +1,271 @@
 body,
 html {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo {
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    display: flex;
-    align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 50px;
-    margin-right: 10px;
+  width: 50px;
+  margin-right: 10px;
 }
 
 .menu-icon {
-    background: none;
-    border: none;
-    padding: 0;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .menu-icon svg {
-    fill: white;
+  fill: white;
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.hero {
-    position: relative;
-}
-
-.overlay {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.242);
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-}
+/* .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.242);
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+} */
 
 .nav-items li a {
-    color: white;
+  color: white;
 }
 
 .desktop-nav {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 768px) {
-    .logo {
-        font-size: 24px;
-    }
-    .logo img {
-        width: 60px;
-    }
+  .logo {
+    font-size: 24px;
+  }
+  .logo img {
+    width: 60px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .logo {
-        font-size: 32px;
-    }
-    .logo img {
-        width: 80px;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .desktop-nav {
-        display: block;
-    }
-    .menu-icon {
-        display: none;
-    }
-    .nav-items {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    .nav-items li {
-        margin: 10px 0;
-    }
-    .nav-items li a {
-        text-decoration: none;
-    }
+  .logo {
+    font-size: 32px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .desktop-nav {
+    display: block;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .nav-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-items li {
+    margin: 10px 0;
+  }
+  .nav-items li a {
+    text-decoration: none;
+  }
+}
+
+.hero-section {
+  background-image: url("/assets/header/background.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* min-height: 40rem; */
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-text {
+  max-width: 40rem;
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: 2em;
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    min-height: 25rem;
+  }
+  .hero-text p {
+    font-size: 2.5rem;
+  }
+  .hero-text {
+    text-align: center;
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    min-height: 30rem;
+  }
+  .hero-text {
+    height: 30rem;
+    justify-content: flex-start;
+    padding-left: 4rem;
+  }
+  .hero-text p {
+    font-size: 3.5rem;
+  }
+}
+
+/* portfolio */
+
+/* Base styles */
+
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-menu {
+  flex: 1;
+  /* Style your menu here */
+}
+
+.portfolio-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  /* Add horizontal padding */
+  color: #333;
+  /* Adjust color as needed */
+  text-decoration: none;
+  /* Additional hover/focus styles can be added here */
+}
+
+.portfolio-items {
+  margin: 0 auto;
+  /* Centers the items container */
+  max-width: 100%;
+  /* Ensure it doesn't exceed the width of its container */
+  padding: 0 1rem;
+  /* Add padding on the sides */
+}
+
+.portfolio-item {
+  text-align: center;
+  /* Center text horizontally */
+  margin-bottom: 2rem;
+  /* Spacing between items */
+  padding: 1rem;
+  /* Padding around each item */
+}
+
+.portfolio-item h2 {
+  font-size: 1.25rem;
+  /* Adjust font size as needed */
+  color: #333;
+  /* Adjust text color as needed */
+}
+
+.portfolio-item hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  /* Line color */
+  margin: 1rem auto;
+  /* Centered margin for horizontal rules */
+  width: 80%;
+  /* Width of hr, adjust as needed */
+}
+
+.portfolio-item img {
+  width: 80%;
+  /* Adjust width as needed */
+  height: auto;
+  display: block;
+  /* This makes 'margin: auto' center the image horizontally */
+  margin: 0 auto;
+  /* Center image horizontally */
+}
+
+/* Responsive styles */
+
+@media (min-width: 768px) {
+  .portfolio-section {
+    flex-direction: row;
+  }
+  .portfolio-menu {
+    width: 25%;
+    /* Adjust width as needed */
+  }
+  .portfolio-items {
+    width: 75%;
+    /* Adjust the width for portfolio items */
+  }
 }

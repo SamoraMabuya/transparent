@@ -209,39 +209,29 @@ header {
 }
 
 .portfolio-items {
-  margin: 0 auto;
-  /* Centers the items container */
-  max-width: 100%;
-  /* Ensure it doesn't exceed the width of its container */
-  padding: 0 1rem;
-  /* Add padding on the sides */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  /* Adjust the space between items */
+  padding: 1rem;
 }
 
 .portfolio-item {
   text-align: center;
-  /* Center text horizontally */
-  margin-bottom: 2rem;
-  /* Spacing between items */
-  padding: 1rem;
-  /* Padding around each item */
 }
 
 .portfolio-item h2 {
-  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  /* Adjust spacing as needed */
+  font-size: 1rem;
   /* Adjust font size as needed */
-  color: #333;
-  /* Adjust text color as needed */
 }
 
 .portfolio-item hr {
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-  /* Line color */
-  margin: 1rem auto;
-  /* Centered margin for horizontal rules */
-  width: 80%;
-  /* Width of hr, adjust as needed */
+  margin-bottom: 0.5rem;
+  /* Adjust spacing as needed */
+  width: 100%;
+  /* Horizontal rule takes full width of the grid item */
 }
 
 .portfolio-item img {
@@ -256,7 +246,7 @@ header {
 
 /* Responsive styles */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .portfolio-section {
     flex-direction: row;
   }

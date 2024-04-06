@@ -190,7 +190,6 @@ header {
 
 .portfolio-menu {
   flex: 1;
-  /* Style your menu here */
 }
 
 .portfolio-menu ul {
@@ -201,18 +200,14 @@ header {
 .portfolio-menu li a {
   display: block;
   padding: 0.5rem 1rem;
-  /* Add horizontal padding */
   color: #333;
-  /* Adjust color as needed */
   text-decoration: none;
-  /* Additional hover/focus styles can be added here */
 }
 
 .portfolio-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
-  /* Adjust the space between items */
   padding: 1rem;
 }
 
@@ -222,26 +217,19 @@ header {
 
 .portfolio-item h2 {
   margin: 0 0 0.5rem;
-  /* Adjust spacing as needed */
   font-size: 1rem;
-  /* Adjust font size as needed */
 }
 
 .portfolio-item hr {
   margin-bottom: 0.5rem;
-  /* Adjust spacing as needed */
   width: 100%;
-  /* Horizontal rule takes full width of the grid item */
 }
 
 .portfolio-item img {
   width: 80%;
-  /* Adjust width as needed */
   height: auto;
   display: block;
-  /* This makes 'margin: auto' center the image horizontally */
   margin: 0 auto;
-  /* Center image horizontally */
 }
 
 /* Responsive styles */
@@ -252,10 +240,89 @@ header {
   }
   .portfolio-menu {
     width: 25%;
-    /* Adjust width as needed */
   }
   .portfolio-items {
     width: 75%;
-    /* Adjust the width for portfolio items */
   }
+}
+
+/* Footer Styles */
+
+.footer {
+  color: #333;
+  padding: 3rem;
+  padding-top: 30rem;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.footer-top h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-top p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-email {
+  font-size: 1.25rem;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.location h4 {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.location address,
+.location a {
+  font-size: 1rem;
+  color: #575757;
+  text-decoration: none;
+  line-height: 1.5;
+  display: block;
+}
+
+.footer-menu-section {
+  text-align: left;
+}
+
+.menu-heading {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.footer-menu a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-social {
+  margin-top: 2rem;
+}
+
+.footer-social a {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
 }

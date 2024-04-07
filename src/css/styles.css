@@ -263,13 +263,14 @@ header {
 }
 
 .footer-top h2 {
-  font-size: 1.8rem;
+  font-size: 3.8rem;
   margin-bottom: 0.5rem;
 }
 
 .footer-top p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
+  color: #9ca3af;
 }
 
 .footer-email {
@@ -325,4 +326,54 @@ header {
 .footer-social img {
   width: 24px;
   height: 24px;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    /* Only set padding once */
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(100% - 6rem);
+    /* Subtract left and right padding */
+  }
+  .footer-top {
+    flex: 1;
+    /* Allow to grow as needed */
+    /* Set a maximum width */
+  }
+  .footer-divider {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .footer-locations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding: 3rem;
+  }
+  .location {
+    margin-right: 0;
+    /* Remove margin-right as grid-gap already provides spacing */
+  }
+  .footer-social {
+    order: 3;
+    /* To ensure it comes after the locations and menu */
+    position: relative;
+    width: 100%;
+    /* Ensure full width */
+    justify-content: flex-start;
+    /* Align to start */
+    padding-top: 0;
+    /* No need for extra padding on top */
+  }
 }
